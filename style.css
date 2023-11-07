@@ -1,0 +1,180 @@
+:root {
+    /* ## Colors */
+
+/* ### Primary */
+
+--main-background : hsl(233, 47%, 7%); 
+--card-background : hsl(244, 38%, 16%);
+--accent : hwb(277 36% 14%); 
+
+/* ### Neutral */
+
+--main-heading_stats : hsl(0, 0%, 100%); 
+--main-paragraph: hsla(0, 0%, 100%, 0.75);
+--stat-headings: hsla(0, 0%, 100%, 0.6);
+   
+    --h2-font: 'Inter', sans-serif;
+    --p-font: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: var(--font-family);
+    background-color: var(--main-background);
+    color: var(--main-heading_stats);
+}
+.wrapper {
+    background-color: var(--card-background);
+    width: 330px;
+    max-width: 75em;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    color: var(--accent);
+    filter: hue-rotate(120deg);
+}
+
+.hero-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent);
+    mix-blend-mode: multiply;  
+    z-index: 1;
+    border-radius: 12px 12px 0 0;
+}
+
+img {
+    filter: contrast(0.55) brightness(1.4) opacity(0.97);
+  }
+
+p {
+    font-family: var(--p-font);
+    color: var(--main-paragraph);
+    font-size: 0.9em;
+}
+h2 {
+    font-family: var(--h2-font);
+    font-size: 1.6rem;
+}
+
+h2.header {
+    text-align: center;
+    margin: 1.3em 1.201em 0.7em;
+}
+
+span {
+    color: var(--accent);
+}
+
+.header-text {
+    margin: 0 2.098em 2.7em;
+    line-height: 1.8;
+}
+
+.lower  p {
+    margin-top: 0.5em;
+    font-size: 0.83rem;
+    color: var(--stat-headings);
+}
+.lower h2 {
+    font-size: 1.5rem;
+    
+}
+
+.lower-one, .lower-two, .lower-three {
+   margin: 0 0 1.4em;
+   
+}
+
+.lower-three {
+    padding-bottom: 0.66em;
+}
+
+@media screen and (min-width: 800px) {
+
+    
+    p {
+        font-size: calc(0.96em + 0.1rem);
+    }
+
+    h2.header {
+        text-align: left;
+        font-size: calc(1.68rem + 0.73rem);
+        margin: 1.3em 1.201em 0.7em;
+    }
+
+    .header-text {
+        margin: 0 5.18em 5.18em 2.7em;
+        text-align: left;
+
+    }
+
+    .header {
+        text-align: left;
+    }
+    .main {
+        padding-left: 20px;
+        padding-top: 26px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 75em;
+        border-radius: 0;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    picture img {
+        display: block;
+        overflow: hidden;
+        border-radius: 0 12px 12px 0;
+    }
+    .hero-img::before {
+        border-radius: 0;
+    }
+
+    .lower {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: start;
+        margin-right: 5em;
+    }
+    .lower-three {
+        padding-bottom: 0;
+    }
+
+    .lower-one, .lower-two, .lower-three {
+        margin: 0 2em 0 0;
+} 
+}
