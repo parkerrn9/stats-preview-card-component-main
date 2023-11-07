@@ -28,19 +28,18 @@ body {
     font-family: var(--font-family);
     background-color: var(--main-background);
     color: var(--main-heading_stats);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    padding: 4em 0;
 }
 .wrapper {
     background-color: var(--card-background);
     width: 330px;
     max-width: 75em;
     border-radius: 12px;
-    overflow: hidden;
-}
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
 }
 
 img {
